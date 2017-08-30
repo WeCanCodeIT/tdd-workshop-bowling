@@ -59,4 +59,11 @@ public class BowlingGameTest {
 		int score = g.score();
 		assertThat(score, is(24));
 	}
+	
+	@Test
+	public void shouldScoreAPerfectGame() {
+		rollMany(12, 10);
+		int score = g.score();
+		assertThat(score, is(300));
+	}
 }
